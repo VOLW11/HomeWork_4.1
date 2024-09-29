@@ -4,11 +4,9 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
 
-
-    public float AddSpeed { get; private set; }
+    private ImprovementsAbilities _ability;
 
     private float xInput;
     private float yInput;
@@ -21,6 +19,7 @@ public class Mover : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _ability = GetComponent<ImprovementsAbilities>();
     }
 
     private void Update()
@@ -29,7 +28,7 @@ public class Mover : MonoBehaviour
         yInput = Input.GetAxisRaw(_verticalAxisName);
 
         if (Mathf.Abs(yInput) > _deadZone)
-            _rigidbody.AddRelativeForce(0, 0, yInput * _speed, ForceMode.Force);
+            _rigidbody.AddRelativeForce(0, 0, yInput * _ability.Speed, ForceMode.Force);
 
         if(Mathf.Abs(xInput) > _deadZone)
             _rigidbody.AddRelativeTorque(0, xInput * _rotationSpeed, 0);

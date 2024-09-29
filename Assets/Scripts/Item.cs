@@ -1,12 +1,17 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public  class Item : MonoBehaviour
+public class Item : MonoBehaviour
 {
-    private CharacterAbilities _abilities;
+    [SerializeField] protected ImprovementsAbilities _ability;
+    [SerializeField] Transform _particleSystemPrefab;
+
 
 
     public virtual void UseEffect()
     {
-        _abilities.increaseHealth(10);
+        Instantiate(_particleSystemPrefab, transform.position, Quaternion.identity);
+
+        Destroy(gameObject);
     }
 }
