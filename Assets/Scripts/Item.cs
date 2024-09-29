@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] protected ImprovementsAbilities _ability;
-    [SerializeField] Transform _particleSystemPrefab;
+    [SerializeField] private Transform _particleSystemPrefab;
 
-
-
-    public virtual void UseEffect()
+    public virtual void UseEffect(ImprovementsAbilities _ability)
     {
         Instantiate(_particleSystemPrefab, transform.position, Quaternion.identity);
 

@@ -3,15 +3,22 @@ using UnityEngine;
 public class ItemCollector : MonoBehaviour
 {
     [SerializeField] private Transform _targetPoint;
+    private ImprovementsAbilities _ability;
+
 
     private Item _item;
     private bool _isFreeHands = true;
 
+    private void Awake()
+    {
+        _ability = GetComponent<ImprovementsAbilities>();
+    }
+
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.F) && _item != null)
+        if (Input.GetKeyDown(KeyCode.F) && _item != null)
         {
-            _item.UseEffect();
+            _item.UseEffect(_ability);
             
             _isFreeHands = true;
         }

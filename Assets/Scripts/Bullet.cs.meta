@@ -4,8 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - _rigidbody: {fileID: 8018528250451486687, guid: cf8ab3b118a21fd468897299328c0ac8,
-      type: 3}
+  - _rigidbody: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

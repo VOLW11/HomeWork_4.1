@@ -4,7 +4,6 @@ public class Mover : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private float _rotationSpeed;
-
     private ImprovementsAbilities _ability;
 
     private float xInput;
@@ -29,7 +28,7 @@ public class Mover : MonoBehaviour
         if (Mathf.Abs(yInput) > _deadZone)
             _rigidbody.AddRelativeForce(0, 0, yInput * _ability.Speed, ForceMode.Force);
 
-        if(Mathf.Abs(xInput) > _deadZone)
+        if (Mathf.Abs(xInput) > _deadZone)
             _rigidbody.AddRelativeTorque(0, xInput * _rotationSpeed, 0);
     }
 
