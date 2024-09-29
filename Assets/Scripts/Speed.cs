@@ -6,7 +6,7 @@ public class Speed : Item
 
     public override void UseEffect()
     {
-        _ability.increaseSpeed(_valueSpeed);
+        _ability.IncreaseSpeed(_valueSpeed);
 
         base.UseEffect();
     }

@@ -8,18 +8,18 @@ public class ImprovementsAbilities : MonoBehaviour
     [SerializeField] private Bullet _bulletPrefab;//
     [SerializeField] private Transform _shootPoint;//
 
-    public int Health {get; private set;} 
+    public int Health { get; private set; } = 100;
     public float Speed {get; private set;}
 
-    private void Awake()
+  /*  private void Awake()
     {
         Health = _defaultHealth;
         Speed = _defaultSpeed;
         Debug.Log(Health);
         Debug.Log(Speed);
-    }
+    }*/
 
-    public void increaseHealth(int value)
+    public void IncreaseHealth(int value)
     {
         Debug.Log(Health);
         Debug.Log(value);
@@ -28,7 +28,7 @@ public class ImprovementsAbilities : MonoBehaviour
         Debug.Log(Health);
     }
 
-    public void increaseSpeed(float value)
+    public void IncreaseSpeed(float value)
     {
         Speed +=  value;
         Debug.Log($"Скорость увеличена на {value}: {Speed}");
@@ -37,6 +37,6 @@ public class ImprovementsAbilities : MonoBehaviour
     public void TakeShot()
     {
         Bullet bullet = Instantiate(_bulletPrefab, _shootPoint.position, Quaternion.identity);
-        bullet.Launch(Vector3.forward);
+        bullet.Launch(_shootPoint.forward);
     }
 }

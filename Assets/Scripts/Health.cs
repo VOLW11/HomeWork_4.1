@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class Health : Item
 {
@@ -7,7 +6,7 @@ public class Health : Item
 
     public override void UseEffect()
     {
-        _ability.increaseHealth(_valueHealth);
+        _ability.IncreaseHealth(_valueHealth);
 
         base.UseEffect();
     }
