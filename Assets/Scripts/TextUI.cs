@@ -5,8 +5,8 @@ using TMPro;
 
 public class TextUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshPro _Health;
-    [SerializeField] private TextMeshPro _Speed;
+    [SerializeField] private TMP_Text _Health;
+    [SerializeField] private TMP_Text _Speed;
     [SerializeField] private ImprovementsAbilities _ability;
 
     private string _textHealth = "Çהמנמגüו: ";
@@ -14,7 +14,7 @@ public class TextUI : MonoBehaviour
 
     private void Update()
     {
-        _Health.text = _textHealth + _ability.Health;
-        _Speed.text = _textSpeed + _ability.Speed;
+        _Health.text = _textHealth + _ability.Health.ToString();
+        _Speed.text = _textSpeed + _ability.Speed.ToString();
     }
 }

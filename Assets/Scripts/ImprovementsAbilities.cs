@@ -20,13 +20,13 @@ public class ImprovementsAbilities : MonoBehaviour
     public void IncreaseHealth(int value)
     {
         Health += value;
-        Debug.Log($"HP увеличено на {value}: {Health}");
+        Debug.Log($"HP увеличено на {value}");
     }
 
     public void IncreaseSpeed(float value)
     {
         Speed += value;
-        Debug.Log($"Скорость увеличена на {value}: {Speed}");
+        Debug.Log($"Скорость увеличена на {value}");
     }
 
     public void TakeShoot()
