@@ -10,5 +10,4 @@ public class Speed : Item
 
         base.UseEffect(_ability);
     }
-
 }

@@ -19,10 +19,8 @@ public class ImprovementsAbilities : MonoBehaviour
 
     public void IncreaseHealth(int value)
     {
-        Debug.Log(Health);
         Health += value;
         Debug.Log($"HP увеличено на {value}: {Health}");
-        Debug.Log(Health);
     }
 
     public void IncreaseSpeed(float value)

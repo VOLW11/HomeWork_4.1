@@ -10,5 +10,4 @@ public class Health : Item
 
         base.UseEffect(_ability);
     }
-
 }

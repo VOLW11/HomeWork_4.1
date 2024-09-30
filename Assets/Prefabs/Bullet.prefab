@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 20
   _rigidbody: {fileID: 8018528250451486687}
+  _explosionPrefab: {fileID: 7631199856235794421, guid: 47555904632783f42bd22d7b644ed5c5,
+    type: 3}
 --- !u!54 &8018528250451486687
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -91,11 +93,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1290369, y: 1.3149066, z: 1.1290369}
+  m_Size: {x: 1.8, y: 1.8, z: 1.8}
   m_Center: {x: 0, y: 0.15745339, z: -0.00000023841858}
 --- !u!1001 &6182626283807951955
 PrefabInstance:

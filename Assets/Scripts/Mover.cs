@@ -19,12 +19,14 @@ public class Mover : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _ability = GetComponent<ImprovementsAbilities>();
     }
-
     private void Update()
     {
         xInput = Input.GetAxisRaw(_horizontalAxisName);
         yInput = Input.GetAxisRaw(_verticalAxisName);
+    }
 
+    private void FixedUpdate()
+    {
         if (Mathf.Abs(yInput) > _deadZone)
             _rigidbody.AddRelativeForce(0, 0, yInput * _ability.Speed, ForceMode.Force);
 
